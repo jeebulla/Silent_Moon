@@ -133,7 +133,7 @@ export default styles = StyleSheet.create({
     backgroundColor: "#eee",
     borderRadius: 15,
     padding: 20,
-    marginVertical: 15,
+    marginVertical: 10,
     width: width * 0.85,
   },
   forgotPassword: {
@@ -146,6 +146,21 @@ export default styles = StyleSheet.create({
     justifyContent: "center",
     gap: 5,
     color: "#444",
-    marginTop: 50,
+    marginTop: 40,
+  },
+  privacyPolicyContainer: {
+    width: width * 0.8,
+    alignSelf: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginVertical: 10,
+    gap: 5,
+    color: "#444",
+  },
+  privacyPolicyText: {
+    flexDirection: "row",
+    gap: 5,
+    color: "#888",
   },
 });

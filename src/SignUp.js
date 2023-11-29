@@ -13,8 +13,9 @@ import BackArrow from "../assets/back-arrow.svg";
 import Google from "../assets/google.svg";
 import Facebook from "../assets/facebook.svg";
 import styles from "./Styles";
+import BouncyCheckbox from "react-native-bouncy-checkbox";
 
-export default function Login({ navigation }) {
+export default function SignIn({ navigation }) {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -25,10 +26,10 @@ export default function Login({ navigation }) {
       >
         <View style={styles.loginScreen}>
           <Noodles style={styles.noodles} />
-          <Pressable onPress={() => navigation.navigate("Home")}>
+          <Pressable onPress={() => navigation.navigate("Login")}>
             <BackArrow style={styles.backArrow} />
           </Pressable>
-          <Text style={styles.welcome}>Welcome Back!</Text>
+          <Text style={styles.welcome}>Create your account </Text>
           <Pressable style={styles.SocialBtnColored}>
             <Facebook style={styles.SocialIcon} />
             <Text style={styles.SocialTextColored}>CONTINUE WITH FACEBOOK</Text>
@@ -42,20 +43,23 @@ export default function Login({ navigation }) {
         </View>
         <View>
           <Text style={styles.orText}>OR LOG IN WITH EMAIL</Text>
+          <TextInput style={styles.input} placeholder="Username" />
           <TextInput style={styles.input} placeholder="Email address" />
           <TextInput style={styles.input} placeholder="Password" />
-          <Pressable style={styles.SocialBtnColored}>
-            <Text style={styles.SocialTextColored}>LOG IN</Text>
-          </Pressable>
-          <Text style={styles.forgotPassword}>Forgot Password?</Text>
-          <View style={styles.loginRedirectContainer}>
-            <Text style={styles.existingAccountText}>
-              ALREADY HAVE AN ACCOUNT?
-            </Text>
-            <Pressable onPress={() => navigation.navigate("SignUp")}>
-              <Text style={styles.loginText}>SIGN UP</Text>
+          <View style={styles.privacyPolicyContainer}>
+            <Pressable style={styles.privacyPolicyText}>
+              <Text style={styles.existingAccountText}>I have read the</Text>
+              <Text style={styles.loginText}>Privace Policy</Text>
             </Pressable>
+            <BouncyCheckbox
+              size={25}
+              fillColor="#7583CA"
+              unfillColor="#FFFFFF"
+            />
           </View>
+          <Pressable style={styles.SocialBtnColored}>
+            <Text style={styles.SocialTextColored}>GET STARTED</Text>
+          </Pressable>
         </View>
       </ScrollView>
     </KeyboardAvoidingView>

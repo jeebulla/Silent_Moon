@@ -11,7 +11,7 @@ import Welcome from "../assets/welcome.svg";
 import Logo from "../assets/logo.svg";
 import styles from "./Styles";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.homeContainer}>
       <Backdrop style={styles.backdrop} />
@@ -26,14 +26,17 @@ const Home = () => {
         </Text>
       </View>
       <View>
-        <Pressable style={styles.signUpBtn}>
+        <Pressable
+          onPress={() => navigation.navigate("Login")}
+          style={styles.signUpBtn}
+        >
           <Text style={styles.signUpText}>SIGN UP</Text>
         </Pressable>
         <View style={styles.redirectCoontainer}>
           <Text style={styles.existingAccountText}>
             ALREADY HAVE AN ACCOUNT?
           </Text>
-          <Pressable>
+          <Pressable onPress={() => navigation.navigate("Login")}>
             <Text style={styles.loginText}>SIGN IN</Text>
           </Pressable>
         </View>
