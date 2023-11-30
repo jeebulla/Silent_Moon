@@ -40,7 +40,7 @@ export default styles = StyleSheet.create({
     color: "#444",
   },
   signUpBtn: {
-    backgroundColor: "#8c73b3",
+    backgroundColor: "#7583CA",
     padding: 20,
     width: width * 0.8,
     borderRadius: 20,
@@ -62,7 +62,7 @@ export default styles = StyleSheet.create({
   },
   loginText: {
     textAlign: "center",
-    color: "#8c73b3",
+    color: "#7583CA",
     fontWeight: "bold",
     fontSize: fontScale * 13,
   },
@@ -108,7 +108,7 @@ export default styles = StyleSheet.create({
     padding: 20,
     width: width * 0.8,
     borderWidth: 0.5,
-    borderColor: "#ccc",
+    borderColor: "#7583CA",
     borderRadius: 30,
     marginVertical: 10,
   },
@@ -135,6 +135,7 @@ export default styles = StyleSheet.create({
     padding: 20,
     marginVertical: 10,
     width: width * 0.85,
+    position: "relative",
   },
   forgotPassword: {
     textAlign: "center",
@@ -162,5 +163,21 @@ export default styles = StyleSheet.create({
     flexDirection: "row",
     gap: 5,
     color: "#888",
+  },
+  inputContainer: {
+    position: "relative",
+  },
+  icon: {
+    position: "absolute",
+    right: 50,
+    top: 28,
+  },
+  errorContainer: {
+    width: width * 0.9,
+    alignSelf: "center",
+  },
+  errorText: {
+    textAlign: "center",
+    color: "red",
   },
 });

@@ -1,15 +1,8 @@
-import {
-  Text,
-  View,
-  Button,
-  Pressable,
-  ImageBackground,
-  SafeAreaView,
-} from "react-native";
-import Backdrop from "../assets/Frame.svg";
-import Welcome from "../assets/welcome.svg";
-import Logo from "../assets/logo.svg";
-import styles from "./Styles";
+import { Text, View, Pressable, SafeAreaView } from "react-native";
+import Backdrop from "../../assets/Frame.svg";
+import Welcome from "../../assets/welcome.svg";
+import Logo from "../../assets/logo.svg";
+import styles from "../Styles";
 
 const Home = ({ navigation }) => {
   return (
@@ -27,7 +20,7 @@ const Home = ({ navigation }) => {
       </View>
       <View>
         <Pressable
-          onPress={() => navigation.navigate("Login")}
+          onPress={() => navigation.navigate("SignUp")}
           style={styles.signUpBtn}
         >
           <Text style={styles.signUpText}>SIGN UP</Text>
