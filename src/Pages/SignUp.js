@@ -159,7 +159,7 @@ export default function SignIn({ navigation }) {
                   <BouncyCheckbox
                     size={25}
                     fillColor="#7583CA"
-                    unfillColor="#FFFFFF"
+                    unfillColor="#fff"
                     onPress={() => setChecked(!checked)}
                   />
                 </View>
